@@ -1,0 +1,3257 @@
+/*
+Theme Name: Alfresco Learning
+Template: rilee
+Theme URI: https://rilee.pixandhue.com/
+Description: A Blog & Shop Theme for WordPress
+Author: Pix & Hue
+Author URI: https://www.pixandhue.com/
+Version: 1.3
+License: Pix & Hue License
+License URI: https://www.pixandhue.com/theme-policies/
+Text Domain: rilee
+Tested up to: 6.8
+Requires PHP: 7.0
+Tags: blog, one-column, two-columns, three-columns, right-sidebar, custom-colors, custom-logo, custom-menu, featured-images, full-width-template, post-formats, sticky-post, theme-options, translation-ready
+*/
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 20px; 
+	line-height: 1.4em; 
+	letter-spacing: 0px;
+	text-align: left;
+	font-weight: 300;
+	color: #000000; 
+	margin: 0;
+	padding: 0;
+	background-color: #F7F5F4;
+}
+p {
+	margin: 0 0 20px 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Very Vogue Display', serif;
+	font-weight: normal;
+	line-height: 1.15em;
+	letter-spacing: 2px;
+	text-transform: none;
+	color: #000000; 
+	margin:  0 0 12px 0;
+}
+h1 {
+	font-size: 37px;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 33px;
+}
+h4 {
+	font-size: 30px;
+}
+h5 {
+	font-size: 28px;
+}
+h6 {
+	font-size: 26px;
+}
+
+/* ------- Form Styling ------- */
+input, textarea, select {
+	width: 67.5%;
+	padding: 18px;
+	border: 1px solid #000000;
+	font-size: 95%;
+	font-family: 'Josefin Sans', sans-serif;
+	color: #000000;
+	font-weight: inherit;
+	background: #FFFFFF; 
+	outline: none;
+	letter-spacing: 0px;
+	line-height: 1em;
+	text-transform: none;
+	border-radius: 0;
+}
+textarea {
+	width: 75%;
+	line-height: 1.4;
+}
+input[type="checkbox"] {
+	width: auto;
+	margin: 0 5px 0 0;
+}
+input[type="text"] { 
+	outline: none;
+}	
+input[type="submit"] {
+	display: inline-block;
+	border-bottom: 0px;
+	background: #000000;
+	border:  0px;
+	color: #FFFFFF;
+	width: auto;
+	font-weight: 400;
+	line-height: 1em;
+	letter-spacing: 2.5px;
+	font-size: 12.5px;
+	margin: 0;
+	padding: 19px 25px;
+	text-transform: uppercase;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+::-webkit-input-placeholder {
+	color: #000000;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 12.5px;
+	letter-spacing: 2.5px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+::-moz-placeholder { 
+	color: #000000;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 12.5px;
+	letter-spacing: 2.5px;
+	font-weight: 400;
+	opacity: 1;
+	text-transform: uppercase;
+}
+:-ms-input-placeholder { 
+	color: #000000;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 12.5px;
+	letter-spacing: 2.5px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+/* ------- Container + Sidebar ------- */
+#rilee-content-container {
+	overflow: hidden;
+	position: relative;
+}
+#rilee-content-container {
+	position: relative;
+}
+.rilee-container,
+.rilee-full-width {
+	width: 1200px;
+	margin: 0 auto;
+	overflow: auto;
+}
+#rilee-content {
+	padding: 0 75px 0 0;
+}
+#rilee-content.rilee-full-width {
+	padding: 0;
+}
+.rilee-default-width {
+	width: 825px;
+	float:left;
+}
+#rilee-sidebar {
+	width: 300px;
+	float:left;
+	padding:  0 0 0;
+	margin: 0 0 110px 0;
+	position: relative;
+	overflow: hidden;
+}
+
+/* ------- General CSS Styles  ------- */
+img { max-width: 100%; height: auto; }
+html { margin-top: 0px !important;}
+fieldset, img { border:0 }
+abbr, acronym { text-decoration: none; border-bottom: 1px dotted;}
+caption, code, dfn, strong, th { font-style:normal; font-weight:normal; margin-bottom: 20px; }
+cite, em, var { font-style: italic; margin-bottom: 20px; }
+address { margin-bottom: 20px; font-style: normal; }
+ins { text-decoration: none; background: #FFF9BD; }
+pre { background: #f3f3f3; color: #000000; padding: 20px; margin-bottom: 20px; white-space: pre-wrap; -ms-word-wrap: break-word; word-wrap: break-word;}
+blockquote, q {-webkit-hyphens: none; -moz-hyphens: none; -ms-hyphens: none; hyphens: none; quotes: none; font-style: italic;}
+q:before, q:after { content:'';}
+caption, th { text-align:left; }
+strong {font-weight: 700;}
+em { font-style: italic; }
+a img { border: none; }
+a {
+	color: #A18A7E;
+	text-decoration:none;
+}
+a:hover, .rilee-copyright-text a:hover, .rilee-cat a:hover, #rilee-content .rilee-author-content h5 a:hover, .rilee-related-posts .rilee-item-related-caption h4 a:hover, .rilee-reply a:hover,  .rilee-edit a:hover, #rilee-content .rilee-comment-author a:hover, .rilee-wp-links a:hover, .rilee-map-widget a:hover h6, .rilee-custom-image-list-title:hover, #rilee-sidebar .rilee-side-title a:hover, .widget_meta a:hover, .widget_nav_menu a:hover,  .widget_recent_entries .wp-block-latest-posts li a:hover, 
+#rilee-sidebar .wp-block-categories li a:hover, #rilee-sidebar .wp-block-archives li a:hover, .rilee-header-cta-section .elementor-widget-text-editor a:hover,
+#rilee-sidebar .zoom-instagram .zoom-instagram-widget__footer .wpz-insta-view-on-insta-button:hover, .pixandhue-copyright a:hover {
+	color: #CCBFB9;
+	cursor: pointer;
+	-webkit-transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s;	
+}
+.rilee-elementor-blog-section .elementor-posts .elementor-post__title a:hover,
+.rilee-loop-item .elementor-widget-theme-post-title a:hover,
+.rilee-loop-item .elementor-post-info__item--type-terms a:hover {
+	color: #CCBFB9 !important;
+	cursor: pointer;
+	-webkit-transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s;	
+}
+input[type="submit"]:hover, .rilee-shortcode-subscription-form input[type="submit"]:hover, 
+.rilee-post-tags a:hover, #commentform input[type="submit"]:hover, #rilee-sidebar .wp-block-search button:hover,
+#rilee-sidebar .wp-block-tag-cloud a:hover, .rilee-elementor-blog-section .elementor-posts .elementor-post__read-more:hover {
+	background-color: #CCBFB9;
+	cursor: pointer;
+	-webkit-transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s;
+}
+.rilee-shortcode-subscription-form .formkit-form .formkit-submit:hover,
+.rilee-opt-in-column .formkit-form .formkit-submit:hover {
+	background-color: #CCBFB9 !important;
+	-webkit-transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s;	
+}
+.rilee-elementor-blog-section .elementor-posts .elementor-post__read-more {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+/* ----- Elementor Header ---- */
+.rilee-custom-nav-menu .elementor-nav-menu .sub-arrow {
+	padding-left: 5px;
+}
+.rilee-custom-nav-menu .elementor-nav-menu--main .elementor-nav-menu ul {
+	top: 30px !important;
+}
+.rilee-custom-nav-menu .elementor-nav-menu--dropdown a {
+	padding-left: 15px !important;
+	margin: 0 !important;
+}
+.rilee-header-site-title .elementor-heading-title {
+	font-size: 45px;
+	line-height: 1em;
+	display: inline-block;
+	position: relative;
+}
+.rilee-custom-nav-menu .elementor-nav-menu .elementor-item,
+.rilee-custom-nav-menu .elementor-nav-menu .elementor-nav-menu--dropdown .elementor-sub-item {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 13.5px;
+	font-weight: 400;
+	line-height: 1em;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+}	
+.rilee-custom-nav-menu .elementor-nav-menu .elementor-nav-menu--dropdown .elementor-sub-item {
+	font-size:  13px;
+}
+.elementor-location-header .elementor-menu-toggle,
+.elementor-location-header .elementor-nav-menu--dropdown a {
+	outline: none;
+}
+.rilee-header-cta-section .elementor-widget-text-editor a {
+	color: inherit;
+}
+
+/* ---- Elementor Standard Font Styles ---- */
+.rilee-elementor-title .elementor-heading-title {
+	font-size: 51px;
+	line-height: 1.15em;
+}
+.rilee-elementor-title .elementor-heading-title em {
+	font-family: 'Very Vogue Display Italic';
+	font-style: normal;
+}
+.rilee-elementor-title.rilee-smaller-serif-title .elementor-heading-title {
+	font-size: 42px;
+}
+.rilee-standard-subtitle,
+.rilee-elementor-toggle .elementor-toggle-title,
+.rilee-elementor-icon-list .elementor-icon-list-text {
+	font-family: 'PT Mono';
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	line-height: 1.7em;
+}
+.rilee-standard-subtitle.rilee-larger-subtitle {
+	font-size: 16px;
+}
+.rilee-elementor-button .elementor-button {
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 2.5px;
+}
+.rilee-standard-list-button .elementor-button {
+	font-family: 'PT Mono';
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+}
+.rilee-standard-services-title .elementor-heading-title {
+	font-family: 'Very Vogue Display Italic';
+	font-size: 35px;
+	letter-spacing: 1px;
+}
+.rilee-elementor-number,
+.rilee-standard-testimonial.elementor-widget-testimonial-carousel .elementor-testimonial__text {
+	font-family: 'Very Vogue Display';
+	font-size: 35px;
+	font-style: normal;
+	line-height: 1.2em;
+}
+.rilee-elementor-blog-section .elementor-posts .elementor-post__title {
+	font-size:  36px;
+	line-height: 1.15;
+}	
+.rilee-elementor-blog-section .elementor-posts .elementor-post__meta-data {
+	font-family: 'PT Mono';
+	font-size: 13.5px;
+	font-weight: 400;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+}
+.rilee-elementor-blog-section .elementor-posts .elementor-post__read-more {
+	text-transform: uppercase;
+	font-weight:  400;
+	font-size:  13px;
+	letter-spacing: 2.5px;
+}
+
+/* ---- Elementor Standard Styles ---- */
+.elementor-page .elementor {
+	overflow: hidden;
+}
+.elementor-maintenance-mode.elementor-page .elementor {
+	overflow: visible;
+}
+.elementor-page .elementor.elementor-location-header {
+	overflow: visible;
+}
+.rilee-no-bottom-p p:last-of-type {
+	margin:  0;
+}
+
+/* ----- Elementor Home ---- */
+.rilee-about-spacer {
+	height: calc(100% - 100px) !important;
+	width: calc(100% - 100px) !important;
+}
+.rilee-full-length-spacer, 
+.rilee-full-length-spacer > .elementor-widget-container {
+	height: 100%;
+}
+.rilee-standard-testimonial.elementor-widget-testimonial-carousel .swiper-slide {
+	padding: 0;
+}
+.rilee-rotated-left-text p {
+	transform-origin: top left;
+	transform: rotate(-90deg) translate(-100%);
+	margin-top: -100% !important;
+	white-space: nowrap;
+	margin-bottom: 0px;
+}
+.rilee-rotated-right-text p {
+	transform-origin: top right;
+	transform: rotate(-90deg) translate(-100%);
+	margin-top: -100% !important;
+	white-space: nowrap;
+	margin-bottom: 0px;
+}
+.rilee-elementor-blog-section .elementor-posts .elementor-post__excerpt p {
+	font-size:  inherit;
+	line-height: inherit;
+}
+.rilee-elementor-blog-section .elementor-posts .elementor-post__read-more {
+	padding: 10px 20px;
+	line-height: 1em;
+	display: inline-block;
+}
+
+/* ----- Elementor About ---- */
+.rilee-about-pg-spacer {
+	height: 100%;
+}
+.rilee-about-pg-spacer > .elementor-widget-container {
+	height: calc(100% - 75px) !important;
+}
+
+/* ----- Elementor Services ---- */
+.rilee-elementor-toggle .elementor-toggle .elementor-tab-content p {
+	margin: 0;
+}
+
+/* ---- Elementor Contact ----- */
+.rilee-contact-form-column .elementor-field-group {
+	margin-left:  auto;
+	margin-right:  auto;
+}
+.rilee-contact-form-column .elementor-form .elementor-button:hover {
+	cursor:  pointer;
+}
+.rilee-contact-form-column .elementor-message {
+	text-align: center;
+	margin-top: 15px;
+}
+.rilee-contact-form-column .elementor-field-textual {
+	padding:  12px;
+}
+.rilee-contact-form-column .elementor-field-group .elementor-field-textual::placeholder {
+	opacity: 1;
+}
+
+/* ---- Elementor Blog ----- */
+.rilee-elementor-blog-section .elementor-pagination {
+	margin:  70px 0 0 0;
+	clear:  both;
+}
+.rilee-elementor-blog-section .elementor-pagination .page-numbers {
+	background: #ece7e5;
+	padding: 10px;
+}
+.rilee-elementor-blog-section .elementor-pagination .current.page-numbers {
+	background-color: #ccbfb9;
+}
+.rilee-elementor-blog-section .elementor-widget-theme-post-excerpt p {
+	margin: 0;
+}
+
+/* --- Elementor Portfolio + Gallery Page Styles ---- */
+.rilee-latest-works-portfolio .elementor-portfolio__filter:hover {
+	color: #CCBFB9 !important;
+	-webkit-transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s;	
+}
+.rilee-image-carousel .swiper-container-horizontal > .swiper-pagination-bullets {
+	bottom:  -10px;
+}
+.rilee-image-carousel .swiper-horizontal .swiper-pagination-bullets {
+	bottom:  -10px !important;
+}
+.elementor-lightbox .swiper .elementor-swiper-button svg,
+.elementor-slideshow__header > svg,
+.elementor-lightbox .dialog-lightbox-close-button svg {
+	fill: #000000 !important;
+}
+.elementor-lightbox .elementor-swiper-button:hover svg,
+.elementor-slideshow__header > svg:hover,
+.elementor-lightbox .dialog-lightbox-close-button svg:hover {
+	fill: #888888 !important;
+}
+
+/* ---- Elementor MailChimp Opt-in Styles ---- */
+.rilee-opt-in-column .mc4wp-form-fields {
+	text-align: center;
+}
+.rilee-opt-in-column .mc4wp-form-fields p:last-of-type {
+	margin-bottom: 0px;
+}
+.rilee-opt-in-column input[type="text"],
+.rilee-opt-in-column input[type="email"] {
+	background-color: transparent;
+	width: 80%;
+}
+.rilee-opt-in-column input[type="submit"] {
+	margin-top: 10px;
+}
+
+/* ---------- MailerLite ---------- */
+.elementor-widget-shortcode .ml-form-embedContainer .ml-form-embedWrapper {
+	background-color:  transparent !important;
+}
+.elementor-widget-shortcode .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+.elementor-widget-shortcode .ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+	padding: 0 !important;
+}
+.elementor-widget-shortcode .ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
+	margin:  0 !important;
+}
+.elementor-widget-shortcode .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4,
+.elementor-widget-shortcode .ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+	text-align: center !important;
+}
+.elementor-widget-shortcode .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+	background-color: transparent;
+}
+.rilee-shortcode-subscription-form .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent {
+	width:  auto !important;
+	margin:  0 !important;
+}
+
+/* Inline Styles */
+.rilee-shortcode-subscription-form .ml-form-embedContainer .ml-form-embedWrapper.embedForm {
+	max-width:  685px !important;
+}
+.rilee-shortcode-subscription-form .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
+	width: 255px !important;
+	float:  left;
+	margin:  0 15px 0 0 !important;
+}
+.rilee-shortcode-subscription-form .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+	width:  auto !important;
+	margin:  0 !important;
+}
+.rilee-shortcode-subscription-form .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+	min-height: 44px;
+	min-width: 130px;
+}
+
+/* Vertical Form Styles */
+.rilee-opt-in-column .ml-form-embedContainer .ml-form-embedWrapper.embedForm {
+	max-width:  100% !important;
+}
+.rilee-opt-in-column .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow{
+	width: 85% !important;
+	float: none;
+	margin: 0 auto 15px !important;
+}
+.rilee-opt-in-column .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+	width: 85% !important;
+	float:  none !important;
+	margin:  0 auto !important;
+}
+
+/* ----------------- Convertkit ----------------- */
+.elementor-widget-shortcode .formkit-powered-by-convertkit-container {
+	display: none !important;
+}
+.elementor-widget-shortcode .formkit-form .formkit-input::placeholder {
+	opacity: 1 !important;
+}
+.elementor-widget-shortcode .formkit-form  {
+	margin: 0 auto;
+	max-width: 100% !important;
+}
+.elementor-widget-shortcode .formkit-form .formkit-input {
+	background-color: transparent !important;
+}
+.rilee-shortcode-subscription-form .formkit-form [data-style="clean"] {
+	padding:  0 !important;
+}
+.rilee-shortcode-subscription-form .formkit-form .formkit-fields {
+	display: block !important;
+	margin:  0 auto !important;
+	text-align: center;
+}
+.rilee-shortcode-subscription-form .formkit-form .formkit-field {
+	display: inline-block;
+	margin: 0 15px 0 0 !important;
+}
+.rilee-shortcode-subscription-form .formkit-form input.formkit-input  {
+	width: 255px;
+}
+.elementor-widget-shortcode .formkit-form .formkit-submit {
+	margin: 0 !important;
+	font-weight: 400 !important;
+	line-height: 1em;
+	letter-spacing: 2.5px;
+	font-size: 12.5px !important;
+	text-transform: uppercase;
+	min-height:  49px;
+	font-family: inherit;
+}
+.elementor-widget-shortcode .formkit-submit:hover > span {
+	background-color: transparent !important;
+}
+.elementor-widget-shortcode .formkit-alert {
+	margin: 0 auto !important;
+}
+
+/* Vertical Form Styles */
+.rilee-opt-in-column .formkit-form .formkit-field {
+	display: block;
+	float:  none;
+	margin: 0 0 20px 0 !important;
+	text-align: center;
+}
+.rilee-opt-in-column .formkit-form input.formkit-input {
+	width: 85%;	
+}
+.rilee-opt-in-column .formkit-form .formkit-submit {
+	width:  85%;
+	margin:  0 auto !important;
+	display: block;
+	flex: none !important;
+}		
+
+
+/* ----------------- Elementor Gallery Styles ----------------- */
+.elementor-widget-image-gallery .gallery-item {
+	margin-top: 0px !important;
+}
+.gallery .gallery-icon img,
+.gallery .gallery-icon img:hover {
+	border: 0px !important;
+	padding: 0px;
+}
+.dialog-type-lightbox {
+	background-color: rgba(255,255,255,.9) !important;
+}
+.elementor-lightbox .swiper-container [class^="eicon"],
+.elementor-lightbox .dialog-lightbox-close-button, 
+.elementor-lightbox .elementor-swiper-button {
+	color: #000000 !important;
+}
+.swiper-container [class^="eicon"]:hover,
+.elementor-lightbox .dialog-lightbox-close-button:hover, 
+.elementor-lightbox .elementor-swiper-button:hover {
+	color: #888888 !important;
+}
+.elementor-lightbox .elementor-lightbox-image {
+	border: 0px !important;
+	border-radius: 0px !important;
+	box-shadow: 0 0 20px rgba(0,0,0,.1),0 0 8px -5px rgba(0,0,0,.1);
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,.1),0 0 8px -5px rgba(0,0,0,.1);
+}
+.elementor-slideshow__footer, 
+.elementor-slideshow__header {
+	box-sizing: border-box !important;
+}
+.elementor-widget-image-box .elementor-image-box-img a {
+	vertical-align: middle;
+	display: inline-block;
+	line-height: 0;
+}
+.elementor-widget-image-box .elementor-image-box-title a:hover {
+	color: #888888 !important;
+}
+
+/* ----------------- Footer Styles ----------------- */
+/* Footer Font Styles */
+.rilee-elementor-button.rilee-instagram-handle .elementor-button {
+	font-family: 'PT Mono';
+	font-size: 14.5px;
+}
+.rilee-footer-menu .menu-item a {
+	font-size: 13px;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	font-weight: 400;
+	line-height: 1.5em;
+} 
+.rilee-copyright-text a {
+	color:  inherit;
+}
+
+/* General Footer Styles */
+.elementor-location-footer.elementor {
+	clear:  both;
+} 
+
+/* Footer Subscription Form Styles */
+.rilee-footer-subscription-section .mc4wp-form-fields {
+	text-align: center;
+}
+.rilee-footer-subscription-section .mc4wp-form-fields p {
+	display: inline-block;
+	margin:  0 15px 0 0;
+}
+.rilee-shortcode-subscription-form input {
+	width: 325px;
+	background-color: transparent;
+	border-color: #FFFFFF;
+	color: #FFFFFF;
+	border-radius: 0;
+}
+.rilee-shortcode-subscription-form input[type="submit"] {
+	width: auto;
+	background-color: #a18a7e;
+	color: #FFFFFF;
+	border:  0px;
+	padding:  23px 25px;
+	vertical-align: 1px;
+}
+.rilee-footer-subscription-section .mc4wp-form-fields p:last-of-type {
+	margin: 0;
+}
+.elementor-widget-shortcode .mc4wp-alert p {
+	margin: 15px 0 0 0;
+    font-style: italic;
+    font-size: .95em;
+    text-align: left;
+}
+.rilee-shortcode-subscription-form ::-webkit-input-placeholder {
+	color: #FFFFFF;
+}
+.rilee-shortcode-subscription-form ::-moz-placeholder {
+	color: #FFFFFF;
+}
+.rilee-shortcode-subscription-form.elementor-widget-shortcode .mc4wp-alert p {
+	color: #FFFFFF;
+	text-align: center;
+}
+
+/* Instagram Feed Styles */
+.rilee-instagram-footer ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.rilee-instagram-footer ul li {
+	list-style-type: none;
+	margin: 0;
+}
+
+/* MailChimp Vertical Form Styles */
+.rilee-vertical-subscribe-form p {
+	text-align: center;
+}
+.rilee-vertical-subscribe-form p:last-of-type {
+	margin: 0;
+}
+.elementor-widget-shortcode.rilee-vertical-subscribe-form .mc4wp-alert p {
+	margin: 15px 0 0 0;
+	text-align: center;
+}
+.rilee-shortcode-subscription-form.rilee-vertical-subscribe-form input {
+	width:  80%;
+	margin-left:  auto;
+	marign-right: auto;
+}
+
+/* Footer Instagram Styles */
+.rilee-footer-instagram-column .zoom-instagram-widget__items {
+	margin: 0;
+	padding: 0;
+}
+.rilee-footer-instagram-column  .zoom-instagram-widget__item  {
+	margin-bottom:  0;
+}
+.elementor-editor-active .rilee-footer-instagram-column .zoom-instagram-widget__items .zoom-instagram-widget__item {
+	width:  calc(33.3333% - 15px);
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+.elementor-editor-active .rilee-footer-instagram-column .zoom-instagram-widget__items .zoom-instagram-widget__item .zoom-instagram-link {
+	height:  180px !important;;
+	width:  100% !important;
+}
+.rilee-copyright-text a {
+	color:  inherit;
+}
+
+/* Copyright Text */
+.pixandhue-copyright {
+	padding: 25px 40px;
+	background-color: #ffffff;
+}
+.pixandhue-copyright p {
+	font-family:"Josefin Sans", Sans-serif;
+	font-size: 13px;
+	text-align: center;
+	margin: 0;
+	color: #000000;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-weight: 300;
+	line-height: 1.5em;
+	font-style: normal;
+}
+.pixandhue-copyright a {
+	color: inherit;
+}
+.page-template-elementor_canvas .pixandhue-copyright,
+.elementor_library-template-elementor_canvas .pixandhue-copyright {
+	display: none;
+}
+
+/* ----------------- WordPress Core Styles ----------------- */ 
+
+/* ------- Single Post Styles  ------- */
+.rilee-single-post {
+	margin: 0 0 110px 0;
+}
+.single-post #rilee-content.rilee-default-width {
+	overflow: hidden;
+}
+.rilee-post-entry 	{
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 35px;
+}
+.rilee-post-content,
+.rilee-post-media-wrapper {
+	position: relative;
+}			
+.rilee-post-img,
+.rilee-post-media {
+	line-height: 0;
+}
+.rilee-post-media {
+	margin: 0 0 43px 0;
+	position: relative;
+}
+.rilee-post-media img {
+	width:  100%;
+}
+.rilee-post-header {
+	clear: both;
+	position: relative;
+	line-height: 1;
+	margin-bottom: 30px;
+	text-align: center;
+}
+#rilee-content .rilee-post-header h1 {
+	margin: 0;
+	font-size: 42px;
+}
+.rilee-cat {
+	line-height: 1;
+	margin: 0 0 7px 0;
+}
+.rilee-cat a,
+.rilee-post-date a {
+	font-size: 13px;
+	line-height: 1em;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-weight: normal;
+}
+.rilee-cat, 
+.rilee-cat a {
+	color: #a18a7e;
+}
+.rilee-cat a {
+	display: inline-block;
+	margin: 0 2px;
+}
+.rilee-cat a:last-of-type {
+	margin-right: 0;
+}
+.rilee-post-date {
+	margin: 13px 0 0 0;
+}
+.rilee-post-date a {
+	color: #888888;
+}
+.rilee-post-date a:hover {
+	cursor: auto;
+	color: #888888;
+}
+
+/* -- Tags -- */
+.rilee-post-tags {
+	clear: both;
+	margin: 40px 0 15px 0;
+	text-align: center;
+}
+.rilee-post-tags-title {
+	font-size: 13px;
+	line-height: 1;
+	letter-spacing: 2.5px;
+	margin-right: 8px;
+	font-weight: normal;
+	color: #000000;
+}
+.rilee-post-tags a {
+	display: inline-block;
+	background: #E1DAD7;
+	color: #000000;
+	font-size: 13px;
+	text-transform: uppercase;
+	padding: 12px 15px;
+	margin: 0 12px 12px 0;
+	letter-spacing: 2.5px;
+	line-height: 1em;
+	font-weight: normal;
+}
+.rilee-post-tags a:last-of-type {
+	margin-right: 0px;
+}
+.rilee-post-tags a:hover {
+	color: #000000;
+}
+
+/* -- Post Author -- */
+.rilee-post-author-box {
+	display: table;
+	padding: 62px 0 65px;
+	overflow: auto;
+	border-bottom: 1px solid #CCCCCC;
+}
+.rilee-author-img {
+	position: relative;
+	display: table-cell;
+	float: left;
+	width: 185px;
+	line-height: 0;
+	margin: 0;
+	border-right: 0px;
+}
+.rilee-author-img img {
+	margin: 0;
+}
+.rilee-author-content {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 35px;
+	line-height: 1;
+}
+#rilee-content .rilee-author-content h5, 
+#rilee-content .rilee-author-content h5 a {
+	color: #000000;
+	font-size: 32px;
+	margin: 0 0 11px 0px;
+}
+.rilee-author-content h5 {
+	position: relative;
+}
+.rilee-author-content p {
+	margin-bottom: 0px;
+	line-height: 1.5;
+	font-size: .95em;
+}
+
+/* -- Related Posts -- */
+.rilee-related-posts {
+	margin: 68px 0 0 0;
+	text-align: center;
+}
+#rilee-content .rilee-related-posts h3 {
+	font-size: 32px;
+	margin: 0 0 22px 0;
+}
+.rilee-item-related-box {
+	display: flex;
+}
+.rilee-item-related {
+	width: 33.3%;
+	margin-right: 25px;
+}
+.rilee-full-width .rilee-item-related {
+	width: 25%;
+}
+.rilee-item-related:last-of-type {
+	margin-right: 0px;
+}
+.rilee-related-post-img {
+	height: 285px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: 0px;
+}
+.rilee-item-related-caption {
+	text-align: center;
+	padding: 27px 15px 30px;
+	background: #FFFFFF;
+}
+.rilee-related-posts .rilee-item-related-caption h4,
+.rilee-related-posts .rilee-item-related-caption h4 a {
+	color: #000000;
+	margin:  0 0 9px 0;
+	font-size: 25px;
+	line-height: 1.35em;
+}
+.rilee-related-post-date {
+	font-size: 12.5px;
+	line-height: 1;
+	color: #999999;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-weight: normal;
+}
+.rilee-full-width .rilee-related-post-img {
+	height: 300px;
+}
+
+/* -- List of Comments -- */ 
+#comments {
+	overflow: auto;
+	margin: 75px 0 0 0;
+}
+.rilee-list-of-comments {
+	margin: 70px 0 0 0;
+	text-align: center;
+}
+#rilee-content .rilee-comment-list-title {
+	font-size: 32px;
+	margin: 0 0 25px 0;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+}
+#rilee-content-container ul.rilee-comments {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	text-align: left;
+	overflow: hidden;
+}
+#rilee-content-container ul.rilee-comments > li,
+#rilee-content-container ul.rilee-comments ul.children > li {
+	margin: 0;
+}
+#rilee-content-container ul.rilee-comments ul.children {
+	margin: 0;
+	padding: 0 0 0 45px;
+	list-style: none;
+}
+#rilee-content-container ul.rilee-comments ul.children .rilee_thecomment {
+	overflow: auto;
+	padding: 25px 0;
+}
+#rilee-content-container ul.rilee-comments ul.children .rilee-comment-footer {
+	margin: 15px 0 0 0;
+}
+#rilee-content-container ul.rilee-comments ul.children p:last-of-type {
+	margin-bottom: 0px;
+}
+.rilee-comments > li:first-of-type  {
+	border-top: 1px solid #CCCCCC;
+}
+.rilee_thecomment {
+	padding: 30px 0 37px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.rilee-comment-author-avatar {
+	width: 80px;
+	display: inline-block;
+	float: left;
+	margin-right: 20px;
+}
+.rilee-comment-author-avatar img {
+	border-radius: 100%
+}
+.rilee-comment-text {
+	margin-left: 100px;
+}
+#rilee-content .rilee-comment-author, 
+#rilee-content .rilee-comment-author a {
+	color: #000000;
+	font-size: 25px;
+	margin-bottom: 13px;
+}
+.rilee-comment-author, 
+.rilee-comment-date {
+	display: inline-block;
+}
+.rilee-comment-parent {
+	text-transform: none;
+	font-size: .9em;
+	vertical-align: 0px;
+	letter-spacing: 0px;
+}
+.rilee-comment-parent .fa-reply {
+	color: #BBBBBB;
+	font-size: 13px;
+	margin-right: 8px;
+	margin-left: 4.5px;
+}
+.rilee-comment-date {
+	float: right;
+	font-size: 12.5px;
+	color: #888888;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+.rilee-comment-text p {
+	margin-bottom: 15px;
+	font-size: 97%;
+}
+.rilee-comment-approval em {
+	color: #888888;
+	margin-left: 5px;
+	vertical-align: .5px;
+	font-size: 95%;
+}
+.rilee-comment-footer {
+	line-height: 1;
+}
+.rilee-reply,
+.rilee-edit  {
+	display: inline-block;
+	text-transform: uppercase;
+	z-index: 2;
+}
+.rilee-reply a,
+.rilee-edit a {
+	color: #000000;
+	font-size: 13px;
+	font-weight: normal;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	border-bottom: 1px solid;
+	line-height: 1;
+}
+.rilee-edit a {
+	position: relative;
+	margin-left: 25px;
+}
+.rilee-edit a:before {
+	position: absolute;
+	content: '';
+	height: 12px;
+	top: 0px;
+	left: -15.5px;
+	border-left: 1px solid #000000;
+}
+.depth-5 .rilee-edit a {
+	margin-left: 0px;
+}
+.depth-5 .rilee-edit a:before {
+	display: none;
+}
+.depth-5 .rilee-reply {
+	display: none;
+}
+#comments_pagination .page-numbers {
+	display: inline-block;
+	margin: 20px 0 0 0;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+/* -- Comment Form -- */ 
+#rilee-comment-form {
+	text-align: center;
+}
+#comments #respond {
+	margin: 0;
+	padding: 40px 30px 50px;
+	background-color: #E1DAD7;
+}
+#cancel-comment-reply-link {
+	font-size: .9em;
+	margin: 0 0 0 10px;
+}
+#comments #reply-title {
+	font-size: 32px;
+	margin-bottom: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+}
+#commentform {
+	overflow: hidden;
+}
+.rilee-comment-form-comment {
+	margin: 0;
+	line-height: 1;
+}
+#commentform textarea,
+#commentform input {
+	box-sizing: border-box;
+	border: 0px;
+}
+#commentform textarea {
+	width: 100%;
+}
+#commentform input {
+	width: 32.4%;
+	margin: 10px 10px 0 0;
+	float: left;
+}
+.rilee-full-width #commentform input {
+	width: 32.69%;
+}
+#commentform input[type="checkbox"] {
+	width: auto !important;
+	padding: 5px;
+	border: 0px;
+	margin: 5px 8px 0 0;
+	-webkit-appearance: checkbox;
+}
+#commentform input[id="url"] {
+	margin-right: 0px;
+}
+#commentform input[type="submit"] {
+	width: auto;
+	background-color: #000000;
+	padding: 15px 25px;
+}
+.rilee-full-width #commentform input[type="submit"] {
+	width: auto;
+}
+.form-submit {
+	margin: 10px 0;
+}
+.comment-form-cookies-consent {
+	width: 100%;
+	margin: 0;
+	padding: 20px 0 0 0;
+	clear: both;
+	font-size: .925em;
+	text-align: left;
+}
+#commentform .comment-form-cookies-consent input,
+.rilee-full-width #commentform .comment-form-cookies-consent input {
+	width: auto !important;
+	padding: 5px;
+	margin: 5px 8px 0 0;
+	-webkit-appearance: checkbox;
+}
+
+/* ------------------------------- 3.6 Single Page ------------------------------- */
+.rilee-single-page .rilee-default-width,
+.rilee-single-page .rilee-full-width  {
+	margin: 0 0 105px 0;
+}
+.rilee-single-page .rilee-page-featured-image {
+	display: none;
+}
+.rilee-single-page #comments {
+	margin: 55px 0 0 0;
+}
+#rilee-content h1.rilee-single-page-title {
+	font-size: 43px;
+	line-height: 1.3;
+}
+.rilee_fullwidth_narrow h1.rilee-single-page-title {
+	text-align: center;
+}
+
+/* ------------------------------- WordPress + Theme Widgets ------------------------------- */
+.widget {
+	margin: 0 0 50px 0;
+	clear: both;
+}
+#rilee-sidebar .widget:last-of-type {
+	margin-bottom: 0;
+}
+#rilee-sidebar .widget-title,
+#rilee-sidebar .widget h4 {
+	font-size: 27px;
+	text-align: center;
+	margin: 0 0 10px 0;
+}
+.widget select, 
+.widget input {
+	width: 100%;
+	margin-right: 0px;
+	border-color: #000000;
+}
+.widget select {
+	text-transform: none;
+}
+.widget input[type="checkbox"] {
+	width: auto;
+	margin: 0 5px 0 0;
+}
+
+/* -- Search Widget -- */
+#rilee-sidebar .widget_search label {
+	display: none;
+}
+#rilee-sidebar .wp-block-search .wp-block-search__input {
+	background-color: transparent;
+	border-color:  #000000;
+	padding: 15px;
+}
+#rilee-sidebar .wp-block-search button {
+	background-color: #000000;
+	color: #FFFFFF;
+	border: 0px;
+}
+
+/* ------------- WP Categories, WP Pages,  WP Recent Posts, 
+WP Recent Comments, WP Archive, WP Meta, WP Nav Menu 
+(including widgets on Elementor Pages) ------------------ */
+.widget_meta,
+.widget_recent_entries,
+.widget_nav_menu,
+.widget_categories,
+.widget_archive {
+	background: #E1DAD7;
+	padding: 38px 22px 35px;
+	text-align: center;
+}
+#rilee-content-container .widget_meta ul,
+#rilee-content-container .widget_recent_entries ul,
+#rilee-content-container .widget_nav_menu ul,
+#rilee-content-container .widget_categories ul,
+#rilee-content-container .widget_archive ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#rilee-content-container .widget_meta li,
+#rilee-content-container .widget_recent_entries li,
+#rilee-content-container .widget_nav_menu li,
+#rilee-content-container .widget_categories li,
+#rilee-content-container .widget_archive li {
+	margin: 0 0 6px 0;
+	padding: 0 0 8px 0;
+	list-style: none;
+	border-bottom: 1px solid #ffffff;
+	display: block;
+}
+#rilee-content-container .widget_categories .children li,
+#rilee-content-container .widget_nav_menu .sub-menu li {
+	border-bottom: 0px;
+	border-top: 1px solid #ffffff;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	padding-top: 6px;
+	margin-top: 9px;
+}
+.widget_meta a,
+.widget_recent_entries .wp-block-latest-posts li a,
+.widget_nav_menu a,
+.widget_categories a,
+.widget_archive a {
+	color: #000000;
+	font-size: 12.5px;
+	text-transform: uppercase;
+	font-weight: normal;
+	letter-spacing: 2.5px;
+	line-height: 1.7;
+	margin:  0;
+	display: inline-block;
+}
+#rilee-sidebar .wp-block-categories select,
+#rilee-sidebar .wp-block-archives-dropdown select {
+	background-color: transparent;
+	border-color:  #000000;
+	font-size: 12.5px;
+	text-transform: uppercase;
+	font-weight: normal;
+	letter-spacing: 2.5px;
+}
+.widget_text p:last-of-type {
+	margin:  0;
+}
+#rilee-sidebar .wp-block-categories li a,
+#rilee-sidebar .wp-block-archives li a {
+	color:  #000000;
+}
+
+/* -- Tag Cloud -- */
+#rilee-sidebar .wp-block-tag-cloud a {
+	display: inline-block;
+	background: #A18A7E;
+	color: #FFFFFF;
+	font-size: 12.5px !important;
+	text-transform: uppercase;
+	padding: 8px 15px 4px;
+	margin: 0 8px 8px 0;
+	letter-spacing: 2.5px;
+	font-weight: normal;
+}
+#rilee-sidebar p.wp-block-tag-cloud {
+	margin: 0;
+}
+
+/* ------- About Me Widget ------- */
+.rilee_about_widget {
+	text-align: center;
+} 
+.rilee-about-img {
+	line-height: 1;
+	position: relative;
+	height: 350px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.rilee-about-widget-caption {
+	background: #CCBFB9;
+	padding: 35px 23px 33px;
+	margin: 0;
+	font-size: 18px;
+	line-height: 1.4;
+}
+.widget .rilee-about-widget h4 {
+	margin: 0 0 11px 0;
+}
+.rilee-about-widget p {
+	margin: 0px;
+}
+
+/* ------- Map Widget ------- */
+.rilee_map_widget {
+	padding: 0;
+	text-align: center;
+	background: #A18A7E;
+}
+.rilee-map-widget {
+	padding-bottom: 30px;
+	overflow: hidden;
+}
+.rilee-map-widget h4 {
+	margin: 6px 12px 1px;
+}
+.rilee-map-widget h6, 
+.rilee-map-widget .fa-map-marker-alt {
+	display: inline-block;
+}
+.rilee-map-widget .fa-map-marker-alt {
+	font-size: 30px;
+	color: #000000;
+	margin: 0 0 7px;
+}
+#rilee-sidebar .rilee-map-widget h6 {
+	font-weight: normal;
+	font-size: 12.5px;
+	letter-spacing: 2.5px;
+	color: #000000;
+	margin-bottom: 0px;
+	text-transform: uppercase;
+	line-height: 1;
+	font-family: 'Josefin Sans', sans-serif;
+}
+.rilee-map-widget img {
+	width: 400px;
+	max-width: 400px !important;
+	margin: -15px 0 0 -50px;
+}
+
+/* ------- Custom Image List Widget ------- */
+.rilee-custom-image-list-item {
+	position: relative;
+	display: table;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 175px;
+	width: 100%;
+	margin: 0 0 18px 0;
+	background-color: #f3f3f3;
+}
+.rilee_custom_image_list_widget a:last-of-type .rilee-custom-list-item {
+	margin: 0;
+}
+.rilee-custom-image-item-overlay {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.rilee-custom-image-list-title {
+	font-weight: normal;
+	display: inline-block;
+	margin: 0 15px;
+	background: #FFFFFF;
+	letter-spacing: 2.5px;
+	color: #000000;
+	text-transform: uppercase;
+	padding: 12px 15px 10px;
+	font-size: 12.5px;
+	line-height: 1;
+}
+.rilee-custom-image-list-widget a:last-of-type .rilee-custom-image-list-item {
+	margin-bottom: 0px;
+}
+
+/* ------- Recent Posts Widget ------- */
+.rilee-recent-posts-widget  {
+	text-align: center;
+}
+.rilee-recent-posts-widget .widget h4.widget-title {
+	margin-bottom: 18px;
+}
+#rilee-content-container ul.rilee-side-newsfeed,
+.rilee-post-wrapper ul.rilee-side-newsfeed {
+	padding: 0;
+	margin: 15px 0 0 0;
+	list-style: none;
+}
+#rilee-content-container ul.rilee-side-newsfeed > li,
+.rilee-post-wrapper ul.rilee-side-newsfeed > li {
+	margin-bottom: 25px;
+}
+#rilee-content-container ul.rilee-side-newsfeed > li:last-of-type,
+.rilee-post-wrapper ul.rilee-side-newsfeed > li:last-of-type {
+	margin-bottom: 0px;
+}
+.rilee-side-item {
+	overflow: hidden;
+	line-height: 1;
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 25px;
+}
+.rilee-side-image {
+	width: 125px;
+	margin-right: 12px;
+	display: inline-block;
+	float: left;
+	line-height: 1;
+	margin-bottom: -2px;
+}
+.rilee-side-image a {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 0;
+}
+.rilee-side-item-text {
+	display: inline-block;
+	text-align: left;
+	margin: 0;
+	width: 163px;
+}
+.rilee-side-item-text.rilee-side-no-thumbnail {
+	width: 100% !important;
+	margin: 0 0 15px 0;
+}
+.widget h4.rilee-side-title {
+	margin: 0 0 2px 0;
+	text-align: left;
+}
+#rilee-sidebar .rilee-side-title a {
+	color: #000000;
+	text-align: left;
+	display: inline-block;
+	font-size: 23.5px;
+	line-height: 1.2;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+.rilee-side-item-date {
+	display: inline-block;
+	color: #999999;
+	font-size: 11.5px;
+	text-transform: uppercase;
+	margin-top: 5px;
+	line-height: 1;
+	letter-spacing: 2.5px;
+	font-weight: normal;
+}
+
+/* ------- Instagram Widget ------- */
+#rilee-sidebar .zoom-instagram .zoom-instagram-widget__footer {
+	margin-top: 23px;
+}
+#rilee-sidebar .zoom-instagram .zoom-instagram-widget__footer .wpz-insta-view-on-insta-button {
+	background-color: transparent;
+	color: #000000;
+	padding: 0;
+	opacity: 1;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 12.5px;
+	letter-spacing: 2.5px;
+	font-weight: normal;
+	text-transform: uppercase;
+	line-height: 1;
+}
+#rilee-sidebar .zoom-instagram .zoom-instagram-widget__footer .wpz-insta-view-on-insta-button .button-icon {
+	display: none;
+}
+
+/* ------------------------------- MISC HTML + WordPress Elements ------------------------------- */
+
+/* ------- Blockquote ------- */
+blockquote {
+	margin-bottom: 20px;
+	position: relative;
+	clear: both;
+	line-height: 1;
+	font-size: inherit;
+	letter-spacing: inherit;
+	line-height: inherit;
+	font-style: inherit;
+}
+blockquote p {
+	position: relative;
+	padding-left: 15px;
+	color: inherit;
+	border-left: 10px solid;
+}
+blockquote cite {
+	display: inline-block;
+	color: #888888;
+	letter-spacing: 2.5px;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-style: normal;
+	margin: 0px;
+	padding-left: 25px;
+	font-weight: 400;
+	line-height: 1;
+}
+blockquote.wp-block-quote.has-text-align-right {
+	border-left: 0px;
+	border-right: 10px solid;
+	padding: 0 15px 0 0;
+	border-left: 0px;
+}
+
+/* ------- Lists + Dividers ------- */
+hr {
+	border: 0;
+	height: 0;
+	border-bottom-width: 2px;
+	clear: both;
+	margin-bottom: 20px;
+	border-block-style:  solid;
+}
+ul, 
+ol {
+	padding-left: 45px;
+	margin-bottom: 25px;
+}
+ul {
+	list-style: square;
+}
+li > ul,
+li > ol {
+	margin: 10px 0 0 0;
+}
+ul > li,
+ol > li {
+	margin: 0 0 14px 0;
+	padding: 0;
+}
+pre {
+	overflow: auto;
+}
+
+/* ------- Images + Gallery ------- */
+.alignnone {
+    margin: 5px 0 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 20px auto;
+    text-align: center;
+}
+.alignright {
+    float:right;
+    margin: 5px 0 10px 20px;
+}
+.alignleft {
+    float: left;
+    margin: 5px 20px 10px 0;
+}
+a img.alignright {
+    float: right;
+    margin: 5px 0 10px 20px;
+}
+a img.alignnone {
+    margin: 5px 0 20px 0;
+}
+a img.alignleft {
+    float: left;
+   	margin: 5px 20px 10px 0;
+}
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.wp-caption {
+    max-width: 100%;
+    text-align: center;
+    width: auto;
+	box-sizing:border-box;
+}
+.wp-caption.alignnone {
+    margin: 5px 0 20px 0;
+}
+.wp-caption.alignleft {
+    margin: 5px 20px 10px 0;
+}
+.wp-caption.alignright {
+   margin: 5px 0 10px 15px;
+}
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    width: auto;
+}
+.wp-caption p.wp-caption-text {
+	color:#888;
+    line-height: 17px;
+    margin: 2px 10px 8px;
+    clear: both;
+    font-size: 13px;
+}
+.gallery {
+	margin-bottom: 30px !important;
+}
+.gallery .gallery-caption{  
+    font-size: 13px;
+	color: #888;
+	margin-top: 4px;
+}  
+.gallery .gallery-icon img{  
+    border-radius: 2px;  
+    border: 1px solid #eee !important;  
+	padding: 7px;
+}  
+.gallery .gallery-icon img:hover {
+	border: 1px solid #ccc !important;  
+}
+
+/* ------- WP Page Links ------- */
+.rilee-wp-links a,
+.rilee-wp-links .post-page-numbers.current {
+	background: #ffffff;
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+	text-align: center;
+	line-height: 25px;
+	color: #000000;
+	margin-right: 6px;
+	font-size: 13px;
+	font-weight: normal;
+}
+.rilee-wp-links .post-page-numbers.current {
+	background-color: transparent;
+	width:  15px;
+}
+.rilee-wp-links .page-links-title {
+	text-transform: none;
+	font-size: 13px;
+	letter-spacing: 2.5px;
+	margin-right: 6px;
+	font-weight: normal;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+/* -------------- Gutenberg Frontend Styles -------- */
+
+/* -- Color Palettes -- */
+.has-dark-grayish-orange-color {
+	color: #A18A7E !important;
+}
+.has-dark-grayish-orange-border-color {
+	border-color: #A18A7E !important;
+}
+.has-grayish-orange-color {
+	color: #CCBFB9 !important;
+}
+.has-grayish-orange-border-color {
+	border-color: #CCBFB9 !important;
+}
+.has-light-grayish-orange-color {
+	color: #E1DAD7 !important;
+}
+.has-light-grayish-orange-border-color {
+	border-color: #E1DAD7 !important;
+}
+.has-dark-grayish-orange-background-color,
+.is-style-outline .wp-block-button__link.has-dark-grayish-orange-background-color {
+	background-color: #A18A7E !important;
+}
+.has-grayish-orange-background-color,
+.is-style-outline .wp-block-button__link.has-grayish-orange-background-color {
+	background-color: #CCBFB9 !important;
+}
+.has-light-grayish-orange-background-color,
+.is-style-outline .wp-block-button__link.has-light-grayish-orange-background-color {
+	background-color: #E1DAD7 !important;
+}
+.wp-block-cover.has-background-dim.has-dark-grayish-orange-color,
+.wp-block-cover.has-background-dim.has-grayish-orange-background-color,
+.wp-block-cover.has-background-dim.has-bright-green-background-color {
+	background-size: cover;
+	background-position: center center;
+}
+a.wp-block-button__link:hover,
+.is-style-outline .wp-block-button__link.has-dark-grayish-orange-background-color:hover,
+.is-style-outline .wp-block-button__link.has-grayish-orange-background-color:hover,
+.is-style-outline .wp-block-button__link.has-light-grayish-orange-background-color:hover {
+	background-color: #CCBFB9 !important;
+	color: inherit;
+	-webkit-transition: all .2s ease 0s;
+	-moz-transition: all .2s ease 0s;
+	-o-transition: all .2s ease 0s;	
+}
+.wp-block-file a.wp-block-file__button:hover {
+	background-color: #CCBFB9;
+	-webkit-transition: all .2s ease 0s;
+	-moz-transition: all .2s ease 0s;
+	-o-transition: all .2s ease 0s;	
+}
+.wp-block-categories li a:hover, 
+.wp-block-archives li a:hover,
+.wp-block-latest-posts li a:hover,
+a.wp-block-latest-comments__comment-author:hover,
+a.wp-block-latest-comments__comment-link:hover {
+	color: #CCBFB9;
+}
+
+/* -- Full-Width Narrow Post - Support for Alignwide + Alignfull Classes -- */
+.single-post .rilee-container, 
+.single-post .rilee-full-width {
+	overflow: visible;
+}
+.rilee_fullwidth_narrow .rilee-post-entry-wrapper {
+	width: 825px;
+	margin: 0 auto;
+}
+.rilee_fullwidth_narrow .alignwide {
+    width: 1200px;
+    margin-left: -22.6%;
+    clear: both;
+}
+.rilee_fullwidth_narrow .alignfull {
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+    width: auto;
+	max-width: 1000%;
+	clear: both;
+}
+.rilee_fullwidth_narrow .rilee-post-tags {
+	text-align: center;
+}
+
+/* -- Full-Width Narrow Page Template -- */
+.page-template-page-narrowfullwidth .rilee-container, 
+.page-template-page-narrowfullwidth .rilee-full-width {
+	overflow: visible;
+}
+.rilee_fullwidth_narrow .rilee-page-content-wrapper {
+	width: 835px;
+	margin: 0 auto;
+}
+.page-template-page-narrowfullwidth .rilee-page-header h1 {
+	text-align: center;
+}
+
+/* -- MISC - Text, Separator, Tables, Files -- */
+.has-x-large-font-size,
+.has-large-font-size,
+.has-medium-font-size,
+.has-small-font-size {
+	line-height: 1.4em;
+}
+.has-drop-cap:not(:focus)::first-letter {
+	font-size: 4em;
+	font-weight: inherit;
+}
+.wp-block-separator {
+	width: 100px;
+	margin: 0 auto 20px;
+}
+.rilee-page-wrapper hr.wp-block-separator {
+	border-bottom: 2px solid;
+	opacity: 1;
+	margin-left:  auto;
+	margin-right: auto;
+}
+.wp-block-separator.is-style-wide {
+	width: 100%;
+	border-bottom-width: 1px;
+}
+hr.wp-block-separator.is-style-dots {
+	width: auto;
+	border: 0px;
+}
+.wp-block-file.alignwide,
+.wp-block-file.alignfull {
+	text-align: center;
+}
+.wp-block-file .wp-block-file__button {
+	background-color: #000000;
+	color: #FFFFFF;
+	font-size: 13px;
+	letter-spacing: 2px;
+	border-radius: 0px;
+	padding: 11px 12px;
+	line-height: 1;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-style: normal;
+}
+pre.wp-block-verse {
+	white-space: pre-wrap;
+	line-height: 1.2;
+}
+.wp-block-spacer {
+	clear: both;
+}
+.wp-block-file:not(.wp-element-button) {
+	font-size: 1em;
+}
+
+/* -- Button -- */
+.wp-block-buttons {
+	margin-bottom: 20px;
+}
+.wp-block-button.alignright,
+.wp-block-button.alignleft {
+	margin-bottom: 5px;
+}
+.wp-block-button.alignright {
+	margin-left: 15px;
+}
+.wp-block-button.alignleft {
+	margin-right: 15px;
+}
+.wp-block-button {
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-size: 13px;
+	font-weight: normal;
+}
+.wp-block-button__link  {
+	text-transform: inherit;
+	font-size: inherit;
+	letter-spacing: inherit;
+	line-height: 1;
+	font-weight: inherit;
+	font-style: normal;
+}
+a.wp-block-button__link {
+	padding: 12px 22px;
+	background-color: #000000;
+}
+a.wp-block-button__link:hover {
+	color: inherit;
+}
+
+/* -- Quotes -- */
+.wp-block-pullquote {
+	border-top: 10px solid;
+	border-bottom: 10px solid;
+	margin: 20px 0;
+	clear:  both;
+	font-size: inherit;
+	line-height: inherit;
+	font-style: inherit;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.wp-block-pullquote.alignfull {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.wp-block-pullquote blockquote {
+	border-left: 0px;
+	width: 100%;
+	margin: 0;
+	font-size:  inherit;
+	font-style: inherit;
+}
+.wp-block-pullquote p,
+.wp-block-pullquote.is-style-solid-color blockquote p,
+.wp-block-pullquote.alignleft p, 
+.wp-block-pullquote.alignright p {
+	padding: 0;
+	margin: 0;
+	font-size:  inherit;
+	color: inherit;
+	border: 0px;
+	font-weight: inherit;
+	font-style: inherit;
+	line-height: inherit;
+}
+.wp-block-pullquote.is-style-solid-color blockquote {
+	max-width: 85%;
+}
+.wp-block-pullquote cite {
+	display: block;
+	margin: 20px 0 0 0;
+	padding: 0;
+	text-align: center;
+	color: #888888;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 2.5px;
+	font-style: normal;
+}
+.wp-block-pullquote.is-style-solid-color blockquote cite {
+	text-transform: uppercase;
+}
+.wp-block-pullquote.alignleft {
+	margin: 8px 30px 20px 0;
+}
+.wp-block-pullquote.alignleft.is-style-solid-color {
+	margin: 6px 30px 20px 0;
+}
+.wp-block-pullquote.alignright {
+	margin: 8px 0 20px 30px;
+}
+.wp-block-pullquote.alignright.is-style-solid-color {
+	margin: 6px 0 20px 30px;
+}
+
+/* -- Social Links -- */
+.rilee-page-wrapper ul.wp-block-social-links {
+	padding-left: 0;
+	margin-bottom: 20px;
+}
+.rilee-page-wrapper ul > li.wp-social-link {
+	margin: 0 10px 0 0;
+}
+.rilee-page-wrapper ul > li.wp-social-link:last-of-type {
+	margin: 0;
+}
+.wp-block-social-links.is-style-logos-only .wp-social-link {
+	padding: 0;
+}
+
+/* -- Archives, Categories -- */
+.wp-block-categories.alignleft,
+.wp-block-categories.alignright, 
+.wp-block-archives.alignleft,
+.wp-block-archives.alignright {
+	margin-bottom: 5px;
+}
+.rilee-post-content ul.wp-block-archives,
+.rilee-page-content ul.wp-block-archives,
+.rilee-post-content ul.wp-block-categories,
+.rilee-page-content ul.wp-block-categories {
+	margin-bottom: 5px;
+	padding-left: 30px;
+}
+.rilee-post-content ul.wp-block-archives.aligncenter,
+.rilee-page-content ul.wp-block-archives.aligncenter,
+.rilee-post-content ul.wp-block-categories.aligncenter,
+.rilee-page-content ul.wp-block-categories.aligncenter {
+	padding-left: 0;
+	margin-bottom: 20px;
+}
+.rilee-post-content ul.wp-block-archives.alignright,
+.rilee-page-content ul.wp-block-archives.alignright,
+.rilee-post-content ul.wp-block-categories.alignright,
+.rilee-page-content ul.wp-block-categories.alignright {
+	padding-left: 0px;
+}
+.wp-block-categories li a, 
+.wp-block-archives li a {
+	color: #000000;
+}
+.wp-block-categories select, 
+.wp-block-archives-dropdown select {
+    padding: 17px 0 12px 10px;
+    border: 1px solid #000000;
+    min-width: 250px;
+    width: auto;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+#rilee-content .wp-block-archives.aligncenter,
+#rilee-content .wp-block-categories.aligncenter,
+#rilee-content .wp-block-archives.alignfull,
+#rilee-content .wp-block-categories.alignfull,
+#rilee-content .wp-block-archives.alignwide,
+#rilee-content .wp-block-categories.alignwide {
+	text-align: center;
+	padding-left: 0;
+}
+#rilee-content .wp-block-categories-list ul.children {
+	padding-left: 35px;
+}
+#rilee-content .wp-block-categories-list ul.children li {
+	margin: 12px 0 6px;
+	list-style: square;
+}
+.rilee-post-content ul.wp-block-archives.alignfull,
+.rilee-page-content ul.wp-block-archives.alignfull,
+.rilee-post-content ul.wp-block-archives.alignwide,
+.rilee-page-content ul.wp-block-archives.alignwide,
+.rilee-post-content ul.wp-block-categories.alignfull,
+.rilee-page-content ul.wp-block-categories.alignfull,
+.rilee-post-content ul.wp-block-categories.alignwide,
+.rilee-page-content ul.wp-block-categories.alignwide {
+	text-align: center;
+	padding: 0;
+}
+.wp-block-categories-dropdown,
+.wp-block-archives-dropdown {
+	margin-bottom: 20px;
+}
+
+/* -- Images -- */
+.wp-block-image,
+.wp-block-embed,
+.wp-block-cover {
+	margin-bottom: 20px;
+}
+.wp-block-image .alignleft,
+.wp-block-image .aligncenter,
+.wp-block-image .alignright, 
+.wp-block-image .alignnone,
+.wp-block-embed.alignleft,
+.wp-block-embed.alignright, 
+.wp-block-embed.alignnone {
+	margin-bottom: 5px;
+}
+.wp-block-image.alignwide {
+	max-width: inherit;
+}
+.wp-block-image.alignwide img {
+	max-width: initial;
+}
+.wp-block-image figcaption {
+	margin-bottom: 0;
+	margin-top: 10px;
+	font-size: 13px;
+	text-align: center;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	color: #888888;
+	font-style: normal;
+	line-height: 1.5;
+}
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+	font-size:  13px;
+	padding: 10px 8px 5px;
+}
+.wp-block-image.alignfull figcaption,
+.wp-block-image.alignwide figcaption,
+.wp-block-image .aligncenter figcaption {
+	padding: 0 20px;
+}
+.wp-block-embed figcaption {
+	font-size: 13.5px;
+	margin-bottom: 0px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #888888;
+	margin-top: 10px;
+	font-style: normal;
+	line-height: 1.5;
+}
+.wp-block-embed.alignfull figcaption,
+.wp-block-embed.alignwide figcaption {
+	padding: 0 20px;
+}
+.wp-block-embed iframe {
+	max-width: 100%;
+}
+.wp-block-embed.aligncenter {
+	margin-bottom: 20px;
+	clear: both;
+}
+.wp-block-media-text {
+	margin-bottom: 20px;
+}
+.wp-block-media-text .wp-block-media-text__media {
+	line-height: 0;
+}
+.wp-block-media-text p {
+	margin-bottom: 0px;
+	padding: 15px 0;
+}
+.rilee-post-content ul.wp-block-gallery,
+.rilee-page-content ul.wp-block-gallery,
+.rilee-page-wrapper ul.blocks-gallery-grid {
+	padding-left: 0px;
+	margin-bottom: 10px;
+}
+.rilee-post-content ul.wp-block-gallery.alignleft,
+.rilee-page-content ul.wp-block-gallery.alignleft,
+.rilee-post-content ul.wp-block-gallery.alignright,
+.rilee-page-content ul.wp-block-gallery.alignright {
+	margin-bottom: 0px;
+}
+.wp-block-gallery .blocks-gallery-image figcaption, 
+.wp-block-gallery .blocks-gallery-item figcaption {
+	box-sizing: border-box;
+	line-height: 1.5;
+	font-size: 13px;
+	padding-top: 11px;
+	text-align: center;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-style: normal;
+}
+.wp-block-gallery .blocks-gallery-item figcaption  {
+	color: #FFFFFF;
+}
+.wp-block-cover.alignright {
+	margin: 5px 0 10px 20px;
+}
+.wp-block-cover.alignleft {
+	margin: 5px 20px 10px 0;
+}
+.wp-block-cover .wp-block-cover__inner-container {
+ 	color: inherit;
+}
+.wp-block-cover.alignfull,
+.wp-block-cover.alignwide {
+	margin-bottom: 20px;
+}
+.wp-block-gallery .blocks-gallery-caption {
+	line-height: 1.5;
+	font-size: 13px;
+	text-align: center;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	margin: 5px 0 0 0;
+	color: #888888;
+	font-style: normal;
+}
+
+/* -- Latest Posts -- */
+.rilee-post-content ul.wp-block-latest-posts,
+.rilee-page-content ul.wp-block-latest-posts {
+	padding: 25px;
+	margin-bottom: 20px;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+}
+.rilee-post-content ul.wp-block-latest-posts.is-grid,
+.rilee-page-content ul.wp-block-latest-posts.is-grid {
+	padding: 0;
+	border: none;
+	margin-bottom: 20px;
+}
+.rilee-post-content ul.wp-block-latest-posts > li,
+.rilee-page-content ul.wp-block-latest-posts > li {
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #CCCCCC;
+	list-style: none;
+	overflow: auto;
+}
+.rilee-post-content ul.wp-block-latest-posts > li:last-of-type,
+.rilee-page-content ul.wp-block-latest-posts > li:last-of-type {
+	margin-bottom: 0;
+}
+.rilee-post-content ul.wp-block-latest-posts.is-grid > li:last-of-type,
+.rilee-page-content ul.wp-block-latest-posts.is-grid > li:last-of-type {
+	margin-bottom: 25px;
+}
+.rilee-post-content ul.wp-block-latest-posts.is-grid > li,
+.rilee-page-content ul.wp-block-latest-posts.is-grid > li {
+	padding: 17px 0;
+	border: none;
+	background: #ffffff;
+	text-align: center;
+}
+.wp-block-latest-posts li:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: none;
+}
+.wp-block-latest-posts.columns-2 li {
+	width: calc(50% - .626em);
+}
+.wp-block-latest-posts.columns-4 li {
+	width: calc(24.99% - .9375em);
+}
+.wp-block-latest-posts.is-grid li:last-child {
+	margin-bottom: 16px;
+}
+.wp-block-latest-posts .wp-block-latest-posts__featured-image.alignleft {
+	margin: 0 15px 0 0;
+	line-height: 1;
+}
+.wp-block-latest-posts .wp-block-latest-posts__featured-image.alignright {
+	margin: 0 0 0 15px;
+	line-height: 1;
+}
+.wp-block-latest-posts .wp-block-latest-posts__featured-image.aligncenter {
+	margin: 0 auto 15px;
+	line-height: 1;
+}
+.wp-block-latest-posts li a {
+	color: #000000;
+	text-transform: uppercase;
+	font-size: 27px;
+	letter-spacing: 0px;
+	line-height: 1.4;
+	display: block;
+	margin-bottom: 0;
+	font-style: normal;
+}
+.wp-block-latest-posts li .wp-block-latest-posts__post-excerpt a,
+.wp-block-latest-posts.is-grid li .wp-block-latest-posts__post-excerpt a {
+	font-size: .75em;
+	margin-top: 8px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	color: #555555;
+}
+.wp-block-latest-posts__post-date {
+	font-size: .7em;
+	color: #888888;
+	text-transform: uppercase;
+	margin: 0;
+	font-weight: 400;
+	letter-spacing: 2px;
+	font-style:  normal;
+}
+.wp-block-latest-posts__post-excerpt {
+	margin-bottom: 0;
+	font-size: .965em;	
+}
+.wp-block-latest-posts__post-author {
+	font-size: .8em;
+	color: #555555;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 2px;
+	font-style:  normal;
+}
+.wp-block-latest-posts.wp-block-latest-posts__list.alignright {
+	text-align:right;
+}
+
+/* The Grid of Posts */
+.wp-block-latest-posts.is-grid .wp-block-latest-posts__featured-image {
+	margin: -17px 0 12px 0;
+}
+.wp-block-latest-posts.is-grid li a {
+	font-size: 25px;
+	padding: 0 17px;
+	clear: both;
+	line-height: 1.5;
+}
+.is-grid .wp-block-latest-posts__post-author {
+	font-size: .7em;
+	margin-bottom: -4px;
+}
+.wp-block-latest-posts.is-grid .wp-block-latest-posts__post-date {
+	padding: 0 15px;
+	font-size: .65em;
+}
+.is-grid .wp-block-latest-posts__post-excerpt {
+	padding: 0 15px;
+	font-size: .925em;
+}
+
+/* -- Comments -- */
+ol.wp-block-latest-comments {
+	padding: 0;
+	border-top: 1px solid #CCCCCC;
+	text-align: left;
+	box-sizing: border-box;
+}
+ol.wp-block-latest-comments.aligncenter {
+	clear: both;
+}
+.rilee-post-content ol.wp-block-latest-comments > li,
+.rilee-page-content ol.wp-block-latest-comments > li {
+	position: relative;
+	margin: 0;
+	padding: 25px 0;
+	list-style: none;
+	border-bottom: 1px solid #CCCCCC;
+}
+.alignwide .wp-block-latest-comments__comment,
+.alignfull .wp-block-latest-comments__comment {
+	padding-left: 20px !important;
+}
+.alignfull .wp-block-latest-comments__comment {
+	padding-right: 20px !important;
+}
+a.wp-block-latest-comments__comment-author {
+	color: #000000;
+	letter-spacing: 2.5px;
+	padding: 1px 2px 1px 0;
+	line-height: 1;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-style: normal;
+}
+a.wp-block-latest-comments__comment-link {
+	color: #000000;
+	font-size: .9em;
+	letter-spacing: 0px;
+	font-weight: normal;
+	font-style: italic;
+}
+.wp-block-latest-comments__comment-date {
+	font-size: 12.5px;
+	text-transform: uppercase;
+	padding: 5px 0 0 0;
+	color: #888888;
+	letter-spacing: 2px;
+	font-weight: 400;
+	font-style: normal;
+}
+.wp-block-latest-comments__comment-excerpt p {
+	font-size: .95em;
+	margin: 12px 0 0 0;
+	line-height: inherit;
+}
+
+/* ----------------- WooCommerce Font Styles ----------------- */
+.woocommerce-cart #rilee-content h1,
+.woocommerce-checkout #rilee-content h1,
+.woocommerce-account #rilee-content h1 {
+	font-size: 43px;
+	line-height: 1.3;
+	margin-bottom: 10px;
+}
+.rilee-related-products-section .elementor-wc-products ul.products li.product .woocommerce-loop-product__title,
+.rilee-shop-products-section ul.products li.product .woocommerce-loop-product__title {
+	font-size: 30px;
+	padding-bottom:  .225em;
+}
+.rilee-shop-products-section ul.products li.product .woocommerce-loop-product__title {
+	padding-top: .25em;
+}
+.rilee-related-products-section .elementor-wc-products ul.products li.product .price,
+.rilee-shop-products-section .elementor-wc-products ul.products li.product .price  {
+	font-family: 'PT Mono';
+	font-size:  16px;
+	letter-spacing: 2.5px;
+	font-weight:  400;
+	font-style: normal;
+}
+.rilee-single-product-info-column .product_title.elementor-heading-title  {
+	font-size:  40px;
+	line-height: 1.2em;
+}
+.woocommerce div.product .rilee-single-product-info-column .price {
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 2.5px;
+	font-style: normal;
+}
+.woocommerce  .rilee-single-product-info-column .woocommerce-breadcrumb,
+.woocommerce div.product .rilee-woocommerce-product-data-section .woocommerce-tabs ul.tabs li a,
+.woocommerce .rilee-single-product-info-column .woocommerce-product-rating .woocommerce-review-link,
+.woocommerce div.product form.cart .variations label,
+.woocommerce div.product form.cart .reset_variations {
+	font-weight:  400;
+	font-size:  13.5px;
+	letter-spacing: 2.5px;
+	line-height: 1.4em;
+	text-transform: uppercase;
+	font-style: normal;
+	font-family: 'PT Mono';
+}
+.woocommerce div.product.elementor .woocommerce-tabs h2,
+.rilee-related-products-section .products h2, 
+#rilee-content .woocommerce-billing-fields h3,
+#rilee-content .woocommerce-additional-fields h3,
+#order_review_heading,
+.woocommerce-order-details h2,
+.woocommerce-customer-details h2,
+.woocommerce-checkout #ship-to-different-address span {
+	font-size: 33px;
+}
+#rilee-content .cart_totals h2 {
+	font-size: 33px;
+	margin: 0 0 12px 0;
+}
+.woocommerce-account .woocommerce h2 {
+	font-size: 33px;
+	margin: 15px 0 0 0;
+}
+.woocommerce-account .addresses .title h3,
+.woocommerce-account .woocommerce-MyAccount-content h3 {
+	float: none;
+	font-size: 33px;
+}
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt,
+.woocommerce a.button,
+.woocommerce #respond input#submit,
+#add_payment_method .wc-proceed-to-checkout a.checkout-button, 
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button, 
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button,
+.woocommerce button.button {
+	font-weight:  400;
+	font-size:  13px;
+	letter-spacing: 2.5px;
+	line-height: 1;
+	text-transform: uppercase;
+	border-radius: 0px;
+	padding:  10px 15px;
+	font-style: normal;
+	font-family: 'Josefin Sans', sans-serif;
+}
+.woocommerce-cart table.cart th,
+.woocommerce-cart .cart-collaterals .cart_totals table th,
+.woocommerce table.shop_table.woocommerce-checkout-review-order-table th,
+.woocommerce table.shop_table.woocommerce-table--order-details th {
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 2.5px;
+	border: 0px;
+	padding: 15px 12px;
+	text-transform: uppercase;
+	color: #000000;
+	font-style: normal;
+}
+.woocommerce-checkout-payment li label {
+	font-size: 13px;
+	line-height: 1;
+	font-weight: 400;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	font-style: normal;
+}
+.woocommerce table.shop_attributes th {
+	font-weight:  400;
+	text-transform: uppercase;
+	font-size:  13px;
+	padding:  15px;
+	letter-spacing: 2.5px;
+	line-height: 1;
+	border-color: #CCCCCC;
+	font-style: normal;
+}
+#rilee-elementor-cart.elementor-widget-woocommerce-cart .woocommerce,
+#rilee-elementor-account.elementor-widget-woocommerce-my-account {
+	font-family: inherit;
+}
+#rilee-elementor-account.elementor-widget-woocommerce-my-account .e-my-account-tab:not(.e-my-account-tab__dashboard--custom) .woocommerce-message,
+#rilee-elementor-account.elementor-widget-woocommerce-my-account .e-my-account-tab:not(.e-my-account-tab__dashboard--custom) .woocommerce-MyAccount-content-wrapper {
+	font-size: .925em;
+}
+
+/* ----------------- WooCommerce Colors ----------------- */
+.woocommerce .star-rating, 
+.woocommerce p.stars a {
+	color: #CCBFB9;
+	font-style: normal;
+}	
+.woocommerce table.shop_table .product-name a:hover, 
+.woocommerce div.product form.cart .reset_variations:hover, 
+.woocommerce-MyAccount-content a:hover, 
+.woocommerce-MyAccount-navigation a:hover,
+.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
+	color: #CCBFB9;
+	-webkit-transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title:hover,
+.rilee-single-product-info-column .woocommerce-breadcrumb > a:hover, 
+a.woocommerce-review-link:hover {
+	color: #CCBFB9 !important;
+	-webkit-transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s;
+}
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt,
+.woocommerce a.button,
+.woocommerce #respond input#submit,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce input.button,
+.woocommerce-account .woocommerce button.button {
+	background: #000000;
+	color: #FFFFFF;
+	border-radius: 0;
+}
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
+.woocommerce #respond input#submit.alt:hover, 
+.woocommerce a.button.alt:hover, 
+.woocommerce button.button.alt:hover, 
+.woocommerce input.button.alt:hover,
+.woocommerce #respond input#submit:hover,
+.woocommerce button.button:hover,
+.woocommerce a.button:hover,
+.woocommerce input.button:hover,
+.woocommerce table.cart td.actions .coupon button:hover,
+.woocommerce-account .woocommerce-form-login button.button:hover,
+.woocommerce-account .woocommerce button.button:hover,
+.woocommerce button.button:hover {
+	background-color: #CCBFB9;
+	-webkit-transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s;
+}
+.woocommerce span.onsale {
+	background-color: #A18A7E;
+	color: #FFFFFF;
+}
+.woocommerce span.onsale:hover {
+	background-color: #CCBFB9;
+	-webkit-transition: all .3s ease 0s;
+	-moz-transition: all .3s ease 0s;
+	-o-transition: all .3s ease 0s;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active,
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error,
+.woocommerce-cart table.cart th, 
+.woocommerce-cart .cart-collaterals .cart_totals table th, 
+.woocommerce table.shop_table.woocommerce-checkout-review-order-table th, 
+.woocommerce table.shop_table.woocommerce-table--order-details th,
+#add_payment_method #payment div.payment_box, 
+.woocommerce-cart #payment div.payment_box, 
+.woocommerce-checkout #payment div.payment_box {
+	background-color: #ECE8E5;
+}
+#add_payment_method #payment div.payment_box::before,
+.woocommerce-cart #payment div.payment_box::before,
+.woocommerce-checkout #payment div.payment_box::before {
+	border-bottom-color: #ECE8E5;
+}
+#rilee-elementor-account .woocommerce table.shop_table.woocommerce-table--order-details th,
+#rilee-elementor-purchase-summary .woocommerce table.shop_table.woocommerce-table--order-details th,
+#rilee-elementor-checkout .woocommerce table.shop_table.woocommerce-checkout-review-order-table th {
+  background: none;
+}
+
+/* ----------------- WooComerce Styles ----------------- */
+
+/* Shop Styles */
+.post-type-archive .elementor-location-archive.product {
+	overflow: hidden;
+}
+.post-type-archive .elementor-products-grid nav.woocommerce-pagination {
+	margin:  70px 0 -35px;
+}
+.woocommerce nav.woocommerce-pagination ul li a, 
+.woocommerce nav.woocommerce-pagination ul li span {
+	font-style: normal;
+	padding: .75em;
+}
+
+/* Single Product Styles */
+.woocommerce div.product div.images {
+	margin:  0;
+}
+.woocommerce span.onsale {
+	min-height: 4em;
+	min-width: 4em;
+	line-height: 4em;
+	text-transform: uppercase;
+	font-size: .75em;
+	font-weight:  normal;
+	font-style: normal;
+	letter-spacing: 1px;
+}
+.woocommerce .star-rating {
+	font-size: 1em;
+	text-transform: none;
+}
+.woocommerce div.product .rilee-single-product-info-column .quantity .qty {
+	width:  100px;
+}
+.woocommerce div.product.elementor .rilee-woocommerce-product-data-section .woocommerce-tabs .panel  {
+	padding:  40px 0 30px 0;
+}
+.woocommerce div.product.elementor .rilee-woocommerce-product-data-section .woocommerce-tabs #tab-reviews.panel  {
+	padding-bottom:  50px;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+	margin:  0;
+	background-color: transparent;
+}
+.woocommerce  div.product.elementor .rilee-woocommerce-product-data-section ul.tabs li a {
+	padding: 18px 25px;
+}
+.rilee-woocommerce-product-data-section #comments {
+	margin:  0;
+}
+.rilee-woocommerce-product-data-section #commentform textarea, 
+.rilee-woocommerce-product-data-section #commentform input {
+	border:  1px solid #CCCCCC;
+}
+.woocommerce  .rilee-single-product-info-column .woocommerce-breadcrumb {
+	margin: 0;
+}
+.woocommerce .rilee-single-product-info-column .woocommerce-product-rating .woocommerce-review-link {
+	margin-top: 2px;
+}
+
+/* Reviews + Review Form */
+.woocommerce #review_form #respond p.stars {
+	font-size: 1.22em;
+	margin-top: 5px;
+}
+.woocommerce #commentform label {
+	font-size: 1em;
+}
+.woocommerce #review_form #respond .comment-form-comment {
+	margin: 0;
+	line-height: .5;
+}
+.woocommerce #review_form #respond .comment-form-author, 
+.woocommerce #review_form #respond .comment-form-email {
+	display: inline-block;
+	float: left;
+	width: 49.3%;
+	margin: 0;
+}
+.woocommerce #review_form #respond .comment-form-author {
+	margin: 0 15px 0 0;
+}
+.woocommerce #review_form .comment-form-comment textarea,
+.woocommerce #review_form .comment-form-author input, 
+.woocommerce #review_form .comment-form-email input {
+	width: 100%;
+	background: transparent;
+	border: 1px solid #CCCCCC;
+}
+.woocommerce #review_form .comment-form-comment textarea {
+	margin: 0;
+}
+.woocommerce #review_form .comment-form-author input,
+.woocommerce #review_form .comment-form-email input {
+	margin-top: 15px;
+}
+.woocommerce #review_form .comment-form-email input {
+	margin-right: 0px;
+}
+.woocommerce #respond input#submit {
+	margin: 13px 0 0 0;
+	padding: 15px;
+}
+.woocommerce table.shop_attributes {
+	margin-top:  30px;
+	border-color:  #CCCCCC;
+	border-style: solid;
+}
+.woocommerce table.shop_attributes td {
+	padding:  15px 20px;
+	font-size:  .95em;
+	font-style:  normal;
+	border-color:  #CCCCCC;
+}
+.woocommerce #reviews #comments ol.commentlist {
+	padding:  0;
+	margin:  20px 0 0 0;
+}
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+	border-radius:  0;
+}
+.woocommerce #reviews #comments ol.commentlist li .comment-text p.meta {
+	font-size:  15.5px;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	font-weight:  400;
+	font-style: normal;
+}
+.woocommerce #reviews #comments ol.commentlist li .comment-text p.meta strong {
+	font-weight:  400;
+}
+.woocommerce #reviews #comments ol.commentlist li .meta {
+	color:  #000000;
+}
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+	padding:  0;
+	border:  0;
+}
+.woocommerce #reviews #comments ol.commentlist li .comment-text p {
+	font-size:  .95em;
+}
+.woocommerce #reviews #comments ol.commentlist li {
+	border-bottom:  1px solid #CCCCCC;
+	padding-bottom:  10px;
+	margin-bottom:  30px;
+}
+.woocommerce div.product.elementor .woocommerce-tabs h2.woocommerce-Reviews-title {
+	margin-bottom:  20px;
+}
+
+/* Variations */
+.woocommerce div.product form.cart .variations {
+	margin-bottom:  3em;
+}
+ul.products li.product .woocommerce-loop-product__link .star-rating {
+	margin-top: 3px;
+	margin-bottom: 10px;
+}
+.woocommerce div.product form.cart .variations select {
+	border-width: 0px;
+	background-color: #f9f9f9;
+	font-weight: 300;
+}
+.woocommerce div.product form.cart .variations select option {
+  font-size: .8em;
+}
+.woocommerce div.product form.cart .variations td, 
+.woocommerce div.product form.cart .variations th {
+	vertical-align: middle;
+	line-height: 1em;
+}
+.woocommerce-variation-price {
+	margin:  -1em 0 2.5em;
+}
+.woocommerce div.product form.cart .variations td.label {
+	padding-right:  .5em;
+}
+
+/* Product Image Gallery */
+.woocommerce div.product div.images .woocommerce-product-gallery__image:nth-child(n+2) { 
+	width: 23.5%;
+	margin: 2% 2% 0 0;
+}
+.woocommerce div.product div.images .woocommerce-product-gallery__image:last-of-type {
+	margin: 2% 0 0 0;
+}
+.woocommerce div.product div.images .woocommerce-product-gallery__image:nth-of-type(n+6) {
+	margin: .5% 2% 0 0;
+}
+.woocommerce div.product div.images .woocommerce-product-gallery__image:nth-of-type(4n+1) {
+	margin: .5% 0 0 0;
+}
+.woocommerce div.product div.images .woocommerce-product-gallery__image:first-of-type {
+	margin: 0;
+}
+
+/* Notifications */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+    border: 0px;
+	font-weight: normal;
+	font-size: .925em;
+}
+.wc-block-components-notice-banner > .wc-block-components-notice-banner__content .wc-forward {
+	margin-top: 7px !important;
+}
+
+/* ----- Cart ----- */
+.cart-empty {
+	margin: 15px 0 20px 0;
+}
+.woocommerce table.shop_table {
+	border-radius: 0px;
+}
+.woocommerce-cart .cart-collaterals .cart_totals table .order-total th,
+.woocommerce table.shop_table.woocommerce-checkout-review-order-table .order-total th {
+	border-top: 1px solid #CCCCCC;
+}
+.woocommerce table.shop_table td,
+.woocommerce td.product-name dl.variation p {
+	border: 0px;
+	font-size: .9em;
+	padding:  10px 7px;
+	font-style: normal;
+}
+.woocommerce-cart .woocommerce .quantity .qty,
+.woocommerce table.shop_table,
+.woocommerce-cart .cart-collaterals .cart_totals tr td {
+	border-color:  #CCCCCC;
+	background-color: transparent;
+}
+.woocommerce table.shop_table.woocommerce-table--order-details td {
+	font-size: 1em;
+}
+.woocommerce td.product-name dl.variation dt {
+	margin-top: 0px;
+}
+.woocommerce a.remove {
+	color:#888888 !important;
+	font-weight: normal;
+}
+.woocommerce a.remove:hover {
+	background:none !important;
+	color: #000000 !important;
+	text-decoration:none;
+}
+.woocommerce table.shop_table .product-name a {
+	color: #000000;
+}
+.woocommerce td.product-name .wc-item-meta, 
+.woocommerce td.product-name dl.variation {
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+.woocommerce td.product-name .wc-item-meta dd, 
+.woocommerce td.product-name dl.variation dd {
+	margin: 0;
+}
+.woocommerce td.product-name dl.variation dt {
+	margin: 0 5px 0 0;
+}
+.woocommerce table.cart td.actions {
+	border-top: 1px solid #CCCCCC;
+	padding: 25px 20px;
+}
+.woocommerce table.cart td.actions .coupon {
+	width: 45%;
+}
+.woocommerce table.cart td.actions .coupon button {
+	background-color: #dddddd;
+	color:  #000000;
+}
+.rilee-default-width .woocommerce table.cart td.actions .coupon {
+	width: 58%;
+}
+.woocommerce-cart table.cart td.actions .coupon .input-text {
+	width: 64%;
+	padding: 9.5px;
+	height: 32px;
+	background-color: transparent;
+	border-color:  #CCCCCC;
+}
+.woocommerce-cart .rilee-default-width table.cart td.actions .coupon .input-text {
+	width: 60%;
+}
+.woocommerce-cart table.cart td.actions .coupon .input-text::-webkit-input-placeholder {
+	line-height: 1;
+}
+.woocommerce-cart table.cart td.actions .coupon .input-text::-moz-placeholder {
+	line-height: 1;
+}
+.woocommerce-cart table.cart td.actions .coupon .input-text:-ms-input-placeholder {
+	line-height: 1;
+}
+.woocommerce .cart-collaterals .cart_totals, 
+.woocommerce-page .cart-collaterals .cart_totals {
+	width: 100%;
+	margin: 23px 0 0 0;
+}
+.woocommerce-page .woocommerce #rilee-elementor-cart .cart-collaterals .cart_totals,
+.woocommerce-page.woocommerce-page #rilee-elementor-cart .cart-collaterals .cart_totals {
+  margin-top: 0px;
+}
+.rilee-page-content .woocommerce-cart .cart-collaterals .cart_totals table tr:first-child th {
+	border: 0px;
+}
+.woocommerce-cart .cart-collaterals .cart_totals table td {
+	vertical-align: middle;
+}
+#add_payment_method .wc-proceed-to-checkout,
+.woocommerce-cart .wc-proceed-to-checkout,
+.woocommerce-checkout .wc-proceed-to-checkout {
+	padding-bottom: 0px;
+}
+#add_payment_method .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+	margin-bottom: 0px;
+}
+.woocommerce .actions button.button:disabled, 
+.woocommerce .actions button.button:disabled[disabled] {
+	padding: 1em;
+}
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+	padding: 20px;
+}
+.woocommerce-cart p.return-to-shop {
+	margin: 0;
+}
+.woocommerce button.button.alt.disabled, 
+.woocommerce button.button.alt.disabled:hover {
+	background-color: #dddddd;
+}
+.woocommerce button.button.alt.disabled {
+	color:  #000000 !important;
+}
+
+/* ----- Checkout ----- */
+#rilee-elementor-checkout .woocommerce-billing-fields {
+	margin: 0;
+}
+#rilee-elementor-checkout .woocommerce table.shop_table.woocommerce-checkout-review-order-table th,
+#rilee-elementor-checkout .woocommerce table.shop_table td {
+  padding-left: 0;
+  background: transparent;
+}
+#rilee-elementor-checkout .woocommerce-additional-fields h3 {
+	display: none;
+}
+.woocommerce-checkout input {
+	font-family: inherit;
+	padding: 13px 0 13px 15px;
+	border-color: #CCCCCC;
+	letter-spacing: 0px;
+	font-size: .92em;
+	font-weight:  normal;
+}
+.woocommerce .woocommerce-info:before {
+	color: #888;
+}
+.woocommerce-checkout #ship-to-different-address input {
+	width: auto;
+	margin: 0;
+	vertical-align: 2px;
+}
+.woocommerce-billing-fields {
+	margin: 0 0 40px 0;
+}
+.woocommerce-order-details h2,
+.woocommerce-customer-details h2,
+.woocommerce-checkout #ship-to-different-address span {
+	margin-bottom: 25px;
+}
+.woocommerce-additional-fields #order_comments {
+	width: 97%;
+	border-color: #CCCCCC;
+	height: 5em;
+	padding: 11px;
+	font-weight: normal;
+}
+.select2-container .select2-selection--single {
+	height: 42px;
+	border-radius: 0px;
+	border-color: #CCCCCC;
+	background: transparent;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	line-height: 43px;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 12.5px;
+	letter-spacing: 1px;
+	padding-left: 15px;
+	color: #69727d !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: 36px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+	border-left-color: transparent !important;
+	border-right-color: transparent !important;
+}
+.rilee-page-content .wc_payment_methods li {
+	list-style-type: none;
+}
+#add_payment_method #payment, 
+.woocommerce-cart #payment, 
+.woocommerce-checkout #payment {
+	border-radius: 0px;
+	background-color: #fefefe;
+}
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+	padding: 10px;
+}
+.wc_payment_method input {
+	width: auto;
+}
+.woocommerce form.woocommerce-form-coupon .form-row input.input-text {
+	padding: 3.5px;
+}
+.woocommerce form.checkout_coupon, 
+.woocommerce form.login, 
+.woocommerce form.register {
+	border-radius: 0px;
+}
+.woocommerce-checkout-review-order-table thead th:last-of-type,
+.woocommerce-checkout-review-order-table .cart_item td:last-of-type,
+.woocommerce-checkout-review-order-table tfoot td,
+.woocommerce-table--order-details thead th:last-of-type,
+.woocommerce-table--order-details .order_item td:last-of-type,
+.woocommerce-table--order-details tfoot td {
+	text-align: center;
+} 
+.woocommerce-table__line-item.order_item {
+	font-size: .91em;
+}
+#add_payment_method #payment div.form-row, 
+.woocommerce-cart #payment div.form-row {
+	padding-bottom: 0;
+}
+.woocommerce-checkout-review-order-table tfoot td,
+.woocommerce .woocommerce-table--order-details tfoot td,
+.woocommerce-cart .cart-collaterals .cart_totals table td {
+	font-weight: 700 !important;
+	letter-spacing: 0px;
+	font-size: .85em !important;
+	text-transform: none;
+	font-style: normal;
+}
+.woocommerce-privacy-policy-text p {
+	font-size: .92em;
+}
+.woocommerce .woocommerce-checkout table.shop_table td,
+.woocommerce .woocommerce-checkout table.shop_table.woocommerce-checkout-review-order-table th,
+.woocommerce .woocommerce-checkout table.shop_table .order-total td {
+	border-top:  1px solid #CCCCCC;
+}
+.woocommerce .woocommerce-checkout table.shop_table.woocommerce-checkout-review-order-table thead th,
+.woocommerce .woocommerce-checkout table.shop_table .cart_item td {
+	border-top:  0px;
+}
+.woocommerce-checkout #payment ul.payment_methods {
+	border-color: #CCCCCC;
+}
+.woocommerce .woocommerce-checkout table.shop_table td strong.product-quantity,
+.woocommerce .woocommerce-order-details table.shop_table td strong.product-quantity {
+	font-weight: normal;
+}
+#add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, 
+.woocommerce-checkout #payment div.payment_box {
+	font-size: .85em;
+}
+
+/* ----- Order Received ----- */
+.woocommerce-message::before,
+.woocommerce-info::before,
+.woocommerce-error:before {
+	top: 1em;
+}
+.woocommerce .woocommerce-message a.button {
+	padding: 10px;
+}
+.woocommerce ul.order_details {
+	padding-left: 0px;
+	margin: 0 0 20px 0;
+}
+.woocommerce .woocommerce-customer-details .woocommerce-customer-details--phone::before,
+.woocommerce .woocommerce-customer-details .woocommerce-customer-details--email::before {
+	line-height: 1.5;
+}
+.woocommerce table.shop_table.woocommerce-table--order-details th {
+	border-bottom: 1px solid #CCCCCC;
+}
+.woocommerce table.shop_table.woocommerce-table--order-details tr:last-of-type th {
+	border: 0px;
+}
+.woocommerce .woocommerce-customer-details {
+	margin-top: 50px;
+}
+.woocommerce .woocommerce-customer-details address {
+	border-radius: 0px;
+	box-sizing: border-box;
+	border-width: 1px;
+}
+.woocommerce ul.order_details li {
+	font-size: .85em;
+	letter-spacing: .5px;
+	border-color:  #000000;
+	font-style: normal;
+}
+.woocommerce ul.order_details li strong {
+	font-size: 1em;
+	text-transform: none;
+	font-weight: 400;
+	margin: 7px 0 0 0;
+	letter-spacing: 0px;
+}
+.woocommerce .woocommerce-order-details {
+	margin-bottom:  0;
+}
+#rilee-elementor-purchase-summary .woocommerce table.shop_table td {
+	padding: 7px 12px;
+	border: 0px;
+}
+#rilee-elementor-purchase-summary .woocommerce table.shop_table.woocommerce-table--order-details tfoot td {
+	border-bottom: 1px solid #cccccc;
+}
+#rilee-elementor-purchase-summary .woocommerce table.shop_table.woocommerce-table--order-details tfoot tr:last-of-type td {
+	border: 0px;
+}
+
+/* ----- My Account ----- */
+.woocommerce form.login, 
+.woocommerce form.register {
+	border-radius: 0px;
+	margin: 1em 0 0 0;
+	border-color: #CCCCCC;
+}
+.woocommerce-account .woocommerce .woocommerce-order-details h2,
+.woocommerce-account .woocommerce .woocommerce-customer-details h2 {
+	margin-bottom: 12px;
+}
+.woocommerce-account input {
+	padding: 12px 8px;
+	width: auto;
+	margin: 0;
+	font-family: inherit;
+	border-color: #CCCCCC;
+	font-size: .92em;
+	letter-spacing: 0px;
+	font-weight:  normal;
+}
+.woocommerce form .form-row label {
+	font-size:  .9em;
+}
+.woocommerce form .form-row input.input-text, 
+.woocommerce form .form-row textarea {
+	font-size: .875em;
+	letter-spacing: 0px;
+	background-color: transparent;
+	border-color: #CCCCCC;
+	text-transform: none;
+}
+.woocommerce-account .woocommerce button.button {
+	margin: 20px 0 0 0;
+	padding: 10px;
+}
+.woocommerce-account .woocommerce-form-login button.button {
+	padding: 12px 15px;
+	margin-right: 10px;
+	background-color: #dddddd;
+}
+.woocommerce-LostPassword {
+	font-size: .9em;
+}
+.woocommerce table.my_account_orders {
+	font-size: .95em;
+	margin:  0;
+}
+.woocommerce table.my_account_orders th,
+.woocommerce table.shop_table.woocommerce-MyAccount-orders td {
+	font-size: .9em;
+	padding: 8px 10px;
+}
+.woocommerce .woocommerce-form-login .woocommerce-form-login__rememberme {
+	display: block;
+}
+.woocommerce-EditAccountForm fieldset {
+	padding: 15px 0 0 0;
+}
+/* Elementor Pro Widget */
+#rilee-elementor-account .woocommerce-MyAccount-navigation ul {
+	margin: 0;
+	padding: 0;
+}
+
+  /* Logged In Users */
+.woocommerce-account .woocommerce-MyAccount-navigation {
+   	width: 27%;
+ }
+.woocommerce-account .woocommerce-MyAccount-content {
+ 	width: 73%;
+ }
+ .rilee-page-content .woocommerce-MyAccount-navigation ul {
+ 	padding-left: 0px;
+ 	margin-top:  0;
+ }
+ .rilee-page-content .woocommerce-MyAccount-navigation ul > li {
+ 	list-style-type: none;
+ 	border-bottom: 1px solid #CCCCCC;
+ 	padding: 8px;
+ 	margin: 0 40px 5px 0;
+ 	font-style: normal;
+ }
+ .woocommerce-MyAccount-navigation a {
+ 	color: #000000;
+ 	text-transform: none;
+ 	letter-spacing: .5px;
+ 	font-size: .925em;
+ }
+ .woocommerce-MyAccount-content a {
+ 	color: #777777;
+ }
+.woocommerce-account .woocommerce-message,
+.woocommerce-account .woocommerce-info,
+.woocommerce-account .woocommerce-error {
+    line-height: 31px;
+}
+.woocommerce-account .woocommerce a.button {
+	padding: 12px;
+}
+ .woocommerce .woocommerce-MyAccount-orders a.button {
+ 	font-size: .95em;
+ 	padding: 6px;
+ 	box-sizing: border-box;
+ 	line-height: 1.15;
+ }
+.woocommerce-account .addresses .title .edit {
+	float: none;
+}
+.woocommerce-EditAccountForm em {
+	display: inline-block;
+	margin: 5px 0;
+	font-size: .9em;
+}
