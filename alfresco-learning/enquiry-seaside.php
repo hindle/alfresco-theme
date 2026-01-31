@@ -1,7 +1,7 @@
-<?php 
+<?php
 /*
  * Template Name:  Seaside Enquiry
- * Template Post Type: page 
+ * Template Post Type: page
  */
 get_header(); ?>
 
@@ -12,7 +12,7 @@ get_header(); ?>
     margin: 0 auto;
     max-width: 700px;
 }
- 
+
 .al_form p, .al_form label, .al_form input, .al_form textarea, .al_form select, .al_form h1, .al_form h2 {
     font-family: "Josefin Sans";
 }
@@ -106,7 +106,7 @@ get_header(); ?>
 
     function submitWorkshopForm(event, form) {
         event.preventDefault();
-        
+
         const submit = document.querySelector('#alfresco_form-submit');
         submit.disabled = true;
         submit.innerHTML = 'Submitting';
@@ -132,7 +132,7 @@ get_header(); ?>
                 throw new Error(`ajax call failed: ${response.status}`);
             }
             submit.disabled = false;
-            
+
             // Hide form
             form.style.display = 'none';
 
@@ -162,7 +162,7 @@ get_header(); ?>
 
         referrer.addEventListener("change", (event) => {
             const value = event.target.value;
-           
+
             if (value == "other") {
                 referrerOtherContainer.style.display = "block";
                 referrerFriend.value = "";
@@ -317,7 +317,7 @@ get_header(); ?>
                         <p>All bookings are subject to our <a href="/cancellation-policy">Payments & Cancellation policy</a>.</p>
                     </div>
 
-                    <button id="alfresco_form-submit" type="submit">Submit</button><br>
+                    <button id="alfresco_form-submit" type="submit">Check availability</button><br>
                     <div id="alfresco_form-error" class="al_error-text" style="display: none;"><p>Sorry, something went wrong, please try again.</p></div>
                 </form>
                 <div id="alfresco_form-success" class="al_success" style="display: none;">
